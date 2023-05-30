@@ -31,5 +31,6 @@ RSpec.configure do |config|
 
     Capistrano::ASG::Rolling::Configuration.set(:asg_rolling_group_name, nil)
     Capistrano::ASG::Rolling::Configuration.set(:asg_rolling_use_private_ip_address, true)
+    Capistrano::ASG::Rolling::Configuration.set(:asg_rolling_healthy_percentage, 100)
   end
 end

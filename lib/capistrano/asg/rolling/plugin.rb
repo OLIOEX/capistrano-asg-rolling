@@ -16,6 +16,7 @@ module Capistrano
           set_if_empty :asg_rolling_use_private_ip_address, true
           set_if_empty :asg_rolling_verbose, true
           set_if_empty :asg_rolling_update, true
+          set_if_empty :asg_rolling_healthy_percentage, 100
         end
 
         def register_hooks

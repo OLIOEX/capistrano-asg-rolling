@@ -60,6 +60,10 @@ module Capistrano
           fetch(:asg_rolling_keep_versions, fetch(:keep_releases))
         end
 
+        def healthy_percentage
+          fetch(:asg_rolling_healthy_percentage)
+        end
+
         def verbose?
           fetch(:asg_rolling_verbose)
         end
