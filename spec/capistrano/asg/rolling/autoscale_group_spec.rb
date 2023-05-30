@@ -69,9 +69,7 @@ RSpec.describe Capistrano::ASG::Rolling::AutoscaleGroup do
     end
 
     context 'when a value is set' do
-      before do
-        Capistrano::ASG::Rolling::Configuration.set(:asg_rolling_healthy_percentage, 50)
-      end
+      subject(:group) { described_class.new('test-asg', healthy_percentage: 50) }
 
       it 'returns the value set in the configuration (50)' do
         expect(group.healthy_percentage).to eq(50)

@@ -41,7 +41,7 @@ module Capistrano
         end
 
         def healthy_percentage
-          Configuration.healthy_percentage
+          properties.fetch(:healthy_percentage, 100)
         end
 
         def start_instance_refresh(launch_template)
